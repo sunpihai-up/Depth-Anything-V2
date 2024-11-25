@@ -15,6 +15,7 @@ if __name__ == '__main__':
     parser.add_argument('--img-path', type=str)
     parser.add_argument('--input-size', type=int, default=518)
     parser.add_argument('--outdir', type=str, default='./vis_depth')
+    parser.add_argument('--npy_dir', type=str, default='./npy')
     
     parser.add_argument('--encoder', type=str, default='vitl', choices=['vits', 'vitb', 'vitl', 'vitg'])
     
@@ -39,14 +40,16 @@ if __name__ == '__main__':
     if os.path.isfile(args.img_path):
         if args.img_path.endswith('txt'):
             with open(args.img_path, 'r') as f:
-                filenames = f.read().splitlines()
+                # filenames = f.read().splitlines()
+                filenames = [line.split()[0] for line in f.read().splitlines()]
+                print(len(filenames))
         else:
             filenames = [args.img_path]
     else:
         filenames = glob.glob(os.path.join(args.img_path, '**/*'), recursive=True)
     
     os.makedirs(args.outdir, exist_ok=True)
-    
+    os.makedirs(args.npy_dir, exist_ok=True)
     cmap = matplotlib.colormaps.get_cmap('Spectral_r')
     
     for k, filename in enumerate(filenames):
@@ -55,6 +58,9 @@ if __name__ == '__main__':
         raw_image = cv2.imread(filename)
         
         depth = depth_anything.infer_image(raw_image, args.input_size)
+        
+        # Save npy
+        np.save(os.path.join(args.npy_dir, os.path.splitext(os.path.basename(filename))[0] + '.npy'), depth)
         
         depth = (depth - depth.min()) / (depth.max() - depth.min()) * 255.0
         depth = depth.astype(np.uint8)

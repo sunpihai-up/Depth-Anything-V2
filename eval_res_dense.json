@@ -1,0 +1,53 @@
+{
+    "depth anything-image-inv depth-zeroshot":
+    {
+        "_RMS_linear": 44.011887668917275,
+        "_RMS_log": 2.230965858480463,
+        "_SILog": 1.4724501621901376,
+        "_abs_rel_diff": 0.7238430039842246,
+        "_mean_depth_error": 26.32751529064565,
+        "_mean_prediction_depth": 2.0216901044845583,
+        "_mean_target_depth": 28.347932946285024,
+        "_median_diff": 10.311092664695572,
+        "_median_prediction_depth": 2.0205206871032715,
+        "_median_target_depth": 12.331613351798849,
+        "_squ_rel_diff": 24.876547771586832,
+        "_threshold_delta_1.25": 3.865909113921093e-06,
+        "_threshold_delta_1.25^2": 0.12424422769063323,
+        "_threshold_delta_1.25^3": 0.22868492709335003
+    },
+    "depth anything-image-normalized log depth-epoch40":
+    {
+        "_RMS_linear": 55.560178234658785,
+        "_RMS_log": 0.36918141804837784,
+        "_SILog": 0.12847569874465414,
+        "_abs_rel_diff": 0.2703790655907288,
+        "_mean_depth_error": 13.738900593022908,
+        "_mean_prediction_depth": 27.607417352676393,
+        "_mean_target_depth": 28.44230016182753,
+        "_median_diff": 0.84804290883377,
+        "_median_prediction_depth": 11.854621950626374,
+        "_median_target_depth": 12.43658423045779,
+        "_squ_rel_diff": 79.19313508533152,
+        "_threshold_delta_1.25": 0.7226107689626693,
+        "_threshold_delta_1.25^2": 0.8457869971331334,
+        "_threshold_delta_1.25^3": 0.9357728428510518
+    },
+    "depth anything-image-normalized log depth-epoch35":
+    {
+        "_RMS_linear": 55.19276490815984,
+        "_RMS_log": 0.3676030619995647,
+        "_SILog": 0.12745405139242286,
+        "_abs_rel_diff": 0.26999058366498824,
+        "_mean_depth_error": 13.63045916355577,
+        "_mean_prediction_depth": 27.597471914291383,
+        "_mean_target_depth": 28.442363133861406,
+        "_median_diff": 0.8343226642741562,
+        "_median_prediction_depth": 11.859858112812041,
+        "_median_target_depth": 12.436621036328134,
+        "_squ_rel_diff": 78.95016013535881,
+        "_threshold_delta_1.25": 0.7244889289376848,
+        "_threshold_delta_1.25^2": 0.8490156931702548,
+        "_threshold_delta_1.25^3": 0.937308593257509
+    }
+}

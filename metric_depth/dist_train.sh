@@ -1,17 +1,17 @@
 #!/bin/bash
 now=$(date +"%Y%m%d_%H%M%S")
 
-epoch=120
+epoch=100
 bs=4
-gpus=8
+gpus=2
 lr=0.000005
 encoder=vitl
-dataset=hypersim # vkitti
+dataset=dense # vkitti
 img_size=518
-min_depth=0.001
-max_depth=20 # 80 for virtual kitti
-pretrained_from=../checkpoints/depth_anything_v2_${encoder}.pth
-save_path=exp/hypersim # exp/vkitti
+min_depth=0
+max_depth=1000 # 80 for virtual kitti
+pretrained_from=/home/sph/code/Depth-Anything-V2/metric_depth/checkpoints/depth_anything_v2_metric_vkitti_vitl.pth
+save_path=/data_nvme/Depth-Estimation/event/depth_anything_v2_${dataset}_normalized_log_${now} # exp/vkitti
 
 mkdir -p $save_path
 

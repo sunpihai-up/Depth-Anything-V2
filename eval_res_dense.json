@@ -49,5 +49,39 @@
         "_threshold_delta_1.25": 0.7244889289376848,
         "_threshold_delta_1.25^2": 0.8490156931702548,
         "_threshold_delta_1.25^3": 0.937308593257509
+    },
+    "depth anything-image-metric depth-epoch60":
+    {
+        "_RMS_linear": 70.87965935053182,
+        "_RMS_log": 0.4259576736187708,
+        "_SILog": 0.1730273680306039,
+        "_abs_rel_diff": 0.3799828994198825,
+        "_mean_depth_error": 17.151633361259044,
+        "_mean_prediction_depth": 30.55024680709839,
+        "_mean_target_depth": 28.441915825552186,
+        "_median_diff": 0.8649842662602969,
+        "_median_prediction_depth": 11.887909339904786,
+        "_median_target_depth": 12.435533340903104,
+        "_squ_rel_diff": 140.28009873027304,
+        "_threshold_delta_1.25": 0.7146698855372416,
+        "_threshold_delta_1.25^2": 0.8316929469803251,
+        "_threshold_delta_1.25^3": 0.9207656819934131
+    },
+    "depth anything-image-metric depth-epoch18":
+    {
+        "_RMS_linear": 60.43032967048781,
+        "_RMS_log": 0.39146013636408933,
+        "_SILog": 0.14817524195153067,
+        "_abs_rel_diff": 0.31693503258867034,
+        "_mean_depth_error": 14.926066689524907,
+        "_mean_prediction_depth": 29.620160583496094,
+        "_mean_target_depth": 28.442242633635477,
+        "_median_diff": 0.6642936548866243,
+        "_median_prediction_depth": 12.278457394123077,
+        "_median_target_depth": 12.43648403504395,
+        "_squ_rel_diff": 95.07504417491569,
+        "_threshold_delta_1.25": 0.7237108592117427,
+        "_threshold_delta_1.25^2": 0.8542957790854676,
+        "_threshold_delta_1.25^3": 0.9325753797220522
     }
 }

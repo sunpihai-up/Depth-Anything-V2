@@ -58,7 +58,7 @@ if __name__ == '__main__':
         raw_image = cv2.imread(filename)
         
         depth = depth_anything.infer_image(raw_image, args.input_size)
-        
+        print(depth.min(), depth.max())
         # Save npy
         np.save(os.path.join(args.npy_dir, os.path.splitext(os.path.basename(filename))[0] + '.npy'), depth)
         
